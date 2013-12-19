@@ -12,6 +12,8 @@ attribute :balance, :kind_of => String
 attribute :bind, :kind_of => String, :default => nil
 attribute :mode, :kind_of => String, :default => nil,
   :equal_to => ['http', 'tcp', 'health', nil]
+attribute :acls, :kind_of => Array, :default => []
+
 
 #I can't think of all parameters available in the future so we allow
 #arbitrary params. Type can be array or hash because some attributes
