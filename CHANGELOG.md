@@ -2,6 +2,11 @@ haproxy Cookbook CHANGELOG
 ==========================
 This file is used to list changes made in each version of the haproxy cookbook.
 
+v1.8.0
+------
+### New Feature
+- Add use_backend attribute in LWRP
+
 v1.7.1
 ------
 ### New Feature

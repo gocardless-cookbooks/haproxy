@@ -9,6 +9,7 @@ action :create do
   listener << "mode #{new_resource.mode}" unless new_resource.mode.nil?
   listener += new_resource.servers.map {|server| "server #{server}" }
   listener += new_resource.acls.map {|acl| "acl #{acl}" }
+  listener += new_resource.use_backend.map {|backend| "use_backend #{backend}" }
 
   if new_resource.params.is_a? Hash
     listener += new_resource.params.map { |k,v| "#{k} #{v}" }
