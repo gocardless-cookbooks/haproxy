@@ -10,6 +10,7 @@ action :create do
   listener += new_resource.servers.map {|server| "server #{server}" }
   listener += new_resource.acls.map {|acl| "acl #{acl}" }
   listener += new_resource.use_backend.map {|backend| "use_backend #{backend}" }
+  listener += new_resource.capture_headers.map {|header| "capture request header #{header} len 15" } unless new_resource.capture_headers.empty?
 
   if new_resource.params.is_a? Hash
     listener += new_resource.params.map { |k,v| "#{k} #{v}" }
