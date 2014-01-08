@@ -46,6 +46,10 @@ default['haproxy']['admin']['address_bind'] = "127.0.0.1"
 default['haproxy']['admin']['port'] = 22002
 default['haproxy']['enable_stats_socket'] = false
 default['haproxy']['stats_socket_path'] = "/var/run/haproxy.sock"
+
+default['haproxy']['user'] = "haproxy"
+default['haproxy']['group'] = "haproxy"
+
 default['haproxy']['stats_socket_user'] = node['haproxy']['user']
 default['haproxy']['stats_socket_group'] = node['haproxy']['group']
 default['haproxy']['pid_file'] = "/var/run/haproxy.pid"
@@ -56,9 +60,6 @@ default['haproxy']['defaults_timeouts']['connect'] = "5s"
 default['haproxy']['defaults_timeouts']['client'] = "50s"
 default['haproxy']['defaults_timeouts']['server'] = "50s"
 default['haproxy']['cookie'] = nil
-
-default['haproxy']['user'] = "haproxy"
-default['haproxy']['group'] = "haproxy"
 
 default['haproxy']['global_max_connections'] = 4096
 default['haproxy']['member_max_connections'] = 100
