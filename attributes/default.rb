@@ -82,6 +82,8 @@ default['haproxy']['source']['use_pcre'] = false
 default['haproxy']['source']['use_openssl'] = false
 default['haproxy']['source']['use_zlib'] = false
 
+default['haproxy']['perf']['buffer_size'] = nil
+
 default['haproxy']['listeners'] = {
   'listen' => {},
   'frontend' => {},
