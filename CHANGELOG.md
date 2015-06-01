@@ -2,6 +2,10 @@ haproxy Cookbook CHANGELOG
 ==========================
 This file is used to list changes made in each version of the haproxy cookbook.
 
+v1.9.4
+------
+- Allow enabling of admin commands on stats socket
+
 v1.9.3
 ------
 - Added foodcritic and related fixes

@@ -7,7 +7,7 @@ global
   user <%= node['haproxy']['user'] %>
   group <%= node['haproxy']['group'] %>
 <% if node['haproxy']['enable_stats_socket'] -%>
-  stats socket <%= node['haproxy']['stats_socket_path'] %> user <%= node['haproxy']['stats_socket_user'] %> group <%= node['haproxy']['stats_socket_group'] %>
+  stats socket <%= node['haproxy']['stats_socket_path'] %> user <%= node['haproxy']['stats_socket_user'] %> group <%= node['haproxy']['stats_socket_group'] %> <%= "level admin" if node["haproxy"]["enable_admin_on_stats_socket"] %>
 <% end -%>
 <% if node['haproxy']['perf']['buffer_size'] -%>
   tune.bufsize <%= node['haproxy']['perf']['buffer_size'] %>
