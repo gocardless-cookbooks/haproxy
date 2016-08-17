@@ -85,6 +85,8 @@ default['haproxy']['source']['use_zlib'] = false
 
 default['haproxy']['perf']['buffer_size'] = nil
 
+default['haproxy']['config']['update_action'] = :reload
+
 default['haproxy']['listeners'] = {
   'listen' => {},
   'frontend' => {},
