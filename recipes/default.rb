@@ -96,7 +96,7 @@ template "#{node['haproxy']['conf_dir']}/haproxy.cfg" do
   owner "root"
   group "root"
   mode 00644
-  notifies :reload, "service[haproxy]"
+  notifies node['haproxy']['config']['update_action'], "service[haproxy]"
   variables(
     :defaults_options => haproxy_defaults_options,
     :defaults_timeouts => haproxy_defaults_timeouts
