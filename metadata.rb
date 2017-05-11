@@ -4,7 +4,7 @@ maintainer_email  "cookbooks@opscode.com"
 license           "Apache 2.0"
 description       "Installs and configures haproxy"
 long_description  IO.read(File.join(File.dirname(__FILE__), 'README.md'))
-version           "1.9.5"
+version           "1.9.6"
 source_url       'https://github.com/gocardless-cookbooks/haproxy' \
                  if respond_to?(:source_url)
 issues_url       'https://github.com/gocardless-cookbooks/haproxy/issues' \

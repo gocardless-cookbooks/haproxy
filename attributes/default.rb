@@ -72,6 +72,8 @@ default['haproxy']['conf_dir'] = '/etc/haproxy'
 
 default['haproxy']['frontend']['capture_headers'] = []
 
+default['haproxy']['package']['version'] = '1.4.22'
+
 default['haproxy']['source']['version'] = '1.4.22'
 default['haproxy']['source']['url'] = 'http://haproxy.1wt.eu/download/1.4/src/haproxy-1.4.22.tar.gz'
 default['haproxy']['source']['checksum'] = 'ba221b3eaa4d71233230b156c3000f5c2bd4dace94d9266235517fe42f917fc6'
